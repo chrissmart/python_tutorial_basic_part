@@ -73,9 +73,11 @@ list_player[0] # show the first row
 list_player[0][0] # show the first element in the first row
 
 # update: edit data
+list_player[0] = '' # change the value of the list
+list_player.append() # add a new element 
 
 # delete:
-
+del list_player[0] # delete the value in a list
 
 """
 Tuple
