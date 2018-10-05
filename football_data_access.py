@@ -15,7 +15,7 @@ Dataframe
 import pandas as pd
 
 # create: import data
-df_player = pd.read_csv(r"C:\Users\chris\Desktop\StatisticsAIDevp\techFun\WorldCupPlayers.csv\WorldCupPlayers.csv")
+df_player = pd.read_csv(r".\dataset\WorldCupPlayers.csv")
 
 # read: inspect data structure
 df_player.info() # show overall information
@@ -67,20 +67,51 @@ list_player = df_player.values.tolist()
 
 # read: inspect data structure
 len(list_player) # show the total number of rows in a list
+max(list_player)
+min(list_player)
 
 # read: find data
 list_player[0] # show the first row
 list_player[0][0] # show the first element in the first row
 
 # update: edit data
-list_player[0] = '' # change the value of the list
-list_player.append() # add a new element 
+list_player[0][3] = 'UNI' # change the value of the list
+list_player[0].append('Hi I\'m here') # add a new element 
 
 # delete:
-del list_player[0] # delete the value in a list
+del list_player[0][-1] # delete the value in a list
 
 """
-Tuple
+Dictionary
+"""
+# create
+dict_player = {'messi':['argentina', 30, 'striker'], 'dembele':['france', '25', 'striker']}
+
+# read
+dict_player['messi']
+
+# update
+dict_player['messi'][1] = 31
+
+# delete
+del dict_player['dembele']
+
+
+"""
+Tuple: cannot be changed
 """
 
+# create
+tup = ("ronaldo", "xavi", "iniesta")
 
+# read
+tup[0]
+tup[1]
+
+# update: tuple cannot be modified
+tup[0] = 'messi'
+tup*4
+
+# delete
+del tup[0] # not allowed
+del tup # feasible
